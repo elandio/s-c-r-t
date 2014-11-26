@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 26/11/2014 08:32:53 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.scrt.hibernate.model.Servidor" table="SERVIDOR">
+        <id name="ID" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="EmpresaPropietaria" type="int">
+            <column name="EMPRESAPROPIETARIA" />
+        </property>
+        <property name="Modelo" type="java.lang.String">
+            <column name="MODELO" />
+        </property>
+        <property name="Marca" type="java.lang.String">
+            <column name="MARCA" />
+        </property>
+        <property name="Estado" type="java.lang.String">
+            <column name="ESTADO" />
+        </property>
+    </class>
+</hibernate-mapping>
