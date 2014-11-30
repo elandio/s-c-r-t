@@ -9,7 +9,7 @@ import com.scrt.hibernate.dao.impl.DAOServidorImpl;
 import com.scrt.hibernate.model.Servidor;
 
 public class ServidorTest {
-	
+	//EL comentario respectivo de cada clase esta en el paquete com.scrt.hibernate.model en la clase DAOServidor
 	
 	public void ListarServidores() {
 		DAOServidorImpl daoServidor = new DAOServidorImpl();
