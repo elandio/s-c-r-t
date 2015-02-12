@@ -3,15 +3,12 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 11/02/2015 07:14:30 PM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-	<class name="com.scrt.hibernate.model.Servidor" table="SERVIDOR">
+	<class name="com.scrt.hibernate.model.Computador" table="COMPUTADOR">
 		<id name="ID" type="int">
 			<column name="ID" />
 			<generator class="assigned" />
 		</id>
-		<many-to-one name="EmpresaPropietaria" class="com.scrt.hibernate.model.Empresa"
-			lazy="false" fetch="join">
-			<column name="EMPRESAPROPIETARIA" />
-		</many-to-one>
+
 		<property name="Modelo" type="java.lang.String">
 			<column name="MODELO" />
 		</property>
@@ -21,5 +18,10 @@
 		<property name="Estado" type="java.lang.String">
 			<column name="ESTADO" />
 		</property>
+
+		<many-to-one name="EmpresaPropietaria" class="com.scrt.hibernate.model.Empresa"
+			lazy="false" fetch="join">
+			<column name="EMPRESAPROPIETARIA" />
+		</many-to-one>
 	</class>
 </hibernate-mapping>

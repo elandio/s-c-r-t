@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11/02/2015 07:14:30 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.scrt.hibernate.model.Consulta" table="CONSULTA">
+		<id name="id" type="int">
+			<column name="ID" />
+			<generator class="assigned" />
+		</id>
+		<property name="fecha" type="java.lang.String">
+			<column name="FECHA" />
+		</property>
+
+		<property name="tipo" type="java.lang.String">
+			<column name="TIPO" />
+		</property>
+		<many-to-one name="usuario" class="com.scrt.hibernate.model.Cuenta"
+			lazy="false" fetch="join">
+			<column name="USUARIO" />
+		</many-to-one>
+	</class>
+</hibernate-mapping>
