@@ -26,7 +26,7 @@ public class DAOServidorImpl implements DAOServidor {
 		List<Servidor> encontradas = new ArrayList<Servidor>();
 		
 		try {
-			encontradas = session.createQuery("from Categoria").list();
+			encontradas = session.createQuery("from Servidor").list();
 		} catch (HibernateException ex) {
 			logger.debug("Exception encontrada" + ex.getLocalizedMessage());
 		} finally {
@@ -61,10 +61,11 @@ public class DAOServidorImpl implements DAOServidor {
 		try {
 			session.save(servidor);
 			session.getTransaction().commit();
-			
+		
 		} catch (HibernateException ex) {
 			logger.debug("Exception encontrada" + ex.getLocalizedMessage());
 		} finally {
+			
 			session.close();
 		}		
 	}

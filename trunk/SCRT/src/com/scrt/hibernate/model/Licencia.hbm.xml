@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11/02/2015 07:14:30 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.scrt.hibernate.model.Licencia" table="LICENCIA">
+		<id name="id" type="int">
+			<column name="ID" />
+			<generator class="assigned" />
+		</id>
+		<property name="Estado" type="java.lang.String">
+			<column name="ESTADO" />
+		</property>
+		<property name="fechaCaducidad" type="java.lang.String"
+			access="field">
+			<column name="FECHACADUCIDAD" />
+		</property>
+		<property name="Software" type="java.lang.String">
+			<column name="SOFTWARE" />
+		</property>
+		<many-to-one name="Empresa" class="com.scrt.hibernate.model.Empresa"
+			lazy="false" fetch="join">
+			<column name="EMPRESA" />
+		</many-to-one>
+	</class>
+</hibernate-mapping>

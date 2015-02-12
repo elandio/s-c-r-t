@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11/02/2015 07:14:30 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.scrt.hibernate.model.Fuente" table="FUENTE">
+		<id name="url" type="java.lang.String">
+			<column name="URL" />
+			<generator class="assigned" />
+		</id>
+		<property name="bd" type="java.lang.String">
+			<column name="BD" />
+		</property>
+		<property name="usuario" type="java.lang.String">
+			<column name="USUARIO" />
+		</property>
+		<property name="contraseña" type="java.lang.String">
+			<column name="CONTRASE&#209;A" />
+		</property>
+		<many-to-one name="Empresa" class="com.scrt.hibernate.model.Empresa"
+			lazy="false" fetch="join">
+			<column name="EMPRESA" />
+		</many-to-one>
+	</class>
+</hibernate-mapping>
