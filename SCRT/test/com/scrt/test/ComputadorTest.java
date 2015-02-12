@@ -27,6 +27,6 @@ public class ComputadorTest {
 		}
 	}
 
-
+//test para la tabla computador
 
 }
