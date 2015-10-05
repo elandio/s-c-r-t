@@ -1,0 +1,1 @@
+Este sistema será un producto diseñado para trabajar en entornos web, lo que permitirá su utilización de forma descentralizada desde cualquier computador que disponga de conexión a internet y tenga instalado un navegador web.
